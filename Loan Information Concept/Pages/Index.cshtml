@@ -1,0 +1,365 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="card">
+    <div class="card-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                   aria-controls="home" aria-selected="true">Loan Information</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <form class="needs-validation" novalidate="">
+                                <div class="card-header">
+                                    <h4>Loan Details</h4>
+                                    <hr>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="clientBranchId" class="col-sm-3 col-form-label">Client Branch Id</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-inline no-gap">
+                                                        <input type="text" class="form-control col-sm-2" id="clientBranchId" required>
+                                                        <input type="text" class="form-control col-sm-8" id="branchName" readonly
+                                                               placeholder="Branch Name">
+                                                        <button type="button" class="btn btn-primary col-sm-2" id="searchBranch">
+                                                            <i class="fas fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="invalid-feedback">Wrong input</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="productId" class="col-sm-3 col-form-label">Product ID</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-inline no-gap">
+                                                        <input type="text" class="form-control col-sm-2" id="productId" required>
+                                                        <input type="text" class="form-control col-sm-8" id="branchName" readonly
+                                                               placeholder="Product Name">
+                                                        <button type="button" class="btn btn-primary col-sm-2" id="searchBranch">
+                                                            <i class="fas fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="productId" class="col-sm-3 col-form-label">Client ID</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-inline no-gap">
+                                                        <input type="text" class="form-control col-sm-2" id="productId" required>
+                                                        <input type="text" class="form-control col-sm-8" id="branchName" readonly
+                                                               placeholder="Client Name">
+                                                        <button type="button" class="btn btn-primary col-sm-2" id="searchBranch">
+                                                            <i class="fas fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="productId" class="col-sm-3 col-form-label">Repayment Account ID</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-inline no-gap">
+                                                        <input type="text" class="form-control col-sm-2" id="productId" required>
+                                                        <input type="text" class="form-control col-sm-8" id="branchName" readonly
+                                                               placeholder="Account Name">
+                                                        <button type="button" class="btn btn-primary col-sm-2" id="searchBranch">
+                                                            <i class="fas fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="businessLine" class="col-sm-3 col-form-label">Line of Business</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control">
+                                                        <option>-Select Loan Business Line-</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="productId" class="col-sm-3 col-form-label">Officer ID</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-inline no-gap">
+                                                        <input type="text" class="form-control col-sm-2" id="productId" required>
+                                                        <input type="text" class="form-control col-sm-8" id="branchName" readonly
+                                                               placeholder="Officer Name">
+                                                        <button type="button" class="btn btn-primary col-sm-2" id="searchBranch">
+                                                            <i class="fas fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanAmount" class="col-sm-3 col-form-label">Loan Amount</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="loanAmount">
+                                                    <div class="invalid-feedback">Invalid Amount!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="term" class="col-sm-3 col-form-label">Term</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="term">
+                                                    <div class="invalid-feedback">Invalid Term!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="rate" class="col-sm-3 col-form-label">Effective Rate</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="rate">
+                                                    <div class="invalid-feedback">Invalid Rate!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="frequency" class="col-sm-3 col-form-label">Installment Frequency</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control">
+                                                        <option>-Select Repayment Frequency-</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Invalid Frequency</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="fileNumber" class="col-sm-3 col-form-label">File Number</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="fileNumber">
+                                                    <div class="invalid-feedback">Invalid Rate!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="securityType" class="col-sm-3 col-form-label">Security Type</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control">
+                                                        <option>-Select Loan Security Type-</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Invalid Rate!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="calculationMethod" class="col-sm-3 col-form-label">
+                                                    Calculation
+                                                    Method
+                                                </label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control">
+                                                        <option>-Select Interest Calculation Method-</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Invalid Rate!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Loan Notes</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="loanNotes">
+                                                    <div class="invalid-feedback">Invalid Rate!</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Loan Type</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control">
+                                                        <option>Rescheduled</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Date</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control datepicker" id="loanNotes">
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Loan Purpose</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control">
+                                                        <option>-Select Loan Purpose-</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="productId" class="col-sm-3 col-form-label">Fund ID</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-inline no-gap">
+                                                        <input type="text" class="form-control col-sm-2" id="productId" required>
+                                                        <input type="text" class="form-control col-sm-8" id="branchName" readonly
+                                                               placeholder="Fund Name">
+                                                        <button type="button" class="btn btn-primary col-sm-2" id="searchBranch">
+                                                            <i class="fas fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Currency ID</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="loanNotes">
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Interest Rate</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="loanNotes">
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Grace Period</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="loanNotes">
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Interest Rate</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="loanNotes">
+                                                    <div class="invalid-feedback">Invalid Rate!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Repayment Start Date</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control datepicker" id="loanNotes">
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Loan Status</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="loanNotes">
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-3 row">
+                                                <label for="loanNotes" class="col-sm-3 col-form-label">Repayment Mode</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control">
+                                                        <option>-Select Repayment Mode-</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">Invalid!</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-header">
+                                            <h4>Audit Info</h4>
+                                            <hr>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3 row">
+                                                        <label for="created_by" class="col-sm-3 col-form-label">Created By</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="created_by" readonly>
+                                                            <div class="invalid-feedback">Invalid!</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-3 row">
+                                                        <label for="created_on" class="col-sm-3 col-form-label">Created On</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="created_on" readonly>
+                                                            <div class="invalid-feedback">Invalid!</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3 row">
+                                                        <label for="modified_on" class="col-sm-3 col-form-label">Modified By</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="modified_on" readonly>
+                                                            <div class="invalid-feedback">Invalid!</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-3 row">
+                                                        <label for="modified_by" class="col-sm-3 col-form-label">Modified By</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="modified_by" readonly>
+                                                            <div class="invalid-feedback">Invalid!</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-primary">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-icon icon-left btn-info btn-block">
+                                    <i class="far fa-plus-square"></i>Add Loan
+                                </button>
+                                <hr>
+                                <button type="button" class="btn btn-icon icon-left btn-primary btn-block">
+                                    <i class="far fa-save"></i>Save Loan
+                                </button>
+                                <hr>
+                                <button type="button" class="btn btn-icon icon-left btn-danger btn-block">
+                                    <i class="far fa-times-circle"></i>Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
